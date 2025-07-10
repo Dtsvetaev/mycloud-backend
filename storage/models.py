@@ -1,6 +1,8 @@
-from django.db import models
-from django.contrib.auth.models import User
 import uuid
+
+from django.contrib.auth.models import User
+from django.db import models
+
 
 class File(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -11,4 +13,3 @@ class File(models.Model):
     upload_date = models.DateTimeField(auto_now_add=True)
     last_download = models.DateTimeField(null=True, blank=True)
     special_link = models.UUIDField(default=uuid.uuid4, unique=True)
-
