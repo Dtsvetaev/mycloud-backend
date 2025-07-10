@@ -9,3 +9,5 @@ db.sqlite3
 .env
 /media/
 node_modules/
+media/
+.vscode/
